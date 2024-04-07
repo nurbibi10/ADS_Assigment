@@ -17,11 +17,11 @@ public class Main {
     }
 
     public static void task1(){
-        int n = scan.nextInt(), min = Integer.MAX_VALUE;
-        for(int i=0;i<n;i++){
+        int n = scan.nextInt();
+        int mn = Integer.MAX_VALUE;
+        for(int i=1; i<n+1; i++){
             int a = scan.nextInt();
-            if (min>a) min=a;
-        }
-        System.out.println(min);
+            if (mn>a) mn=a;}
+        System.out.println(mn);
     }
 }
