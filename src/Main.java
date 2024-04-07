@@ -19,6 +19,9 @@ public class Main {
             case 3:
                 task3();
                 break;
+            case 4:
+                task4();
+                break;
         }
     }
 
@@ -57,5 +60,16 @@ public class Main {
                 System.out.println(n+" is a prime number");
             }
         }
+    }
+    public static int factorial(int n){
+        if(n==0||n==1) return 1;
+        else{
+            return n*factorial(n-1);
+        }
+    }
+    public static void task4(){
+        int n = scan.nextInt();
+        int fact=factorial(n);
+        System.out.println(fact);
     }
 }
