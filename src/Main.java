@@ -16,6 +16,9 @@ public class Main {
             case 2:
                 task2();
                 break;
+            case 3:
+                task3();
+                break;
         }
     }
 
@@ -36,5 +39,23 @@ public class Main {
             s+=a;
         }
         System.out.println(s/n);
+    }
+    public static void task3(){
+        int n = scan.nextInt(),s=0;
+        if (n==1) System.out.println(n+" is not a prime number");
+        else{
+            for(int i=2;i<n;i++){
+                if(n%i==0){
+                    s=1;
+                    break;
+                }
+            }
+            if(s==1){
+                System.out.println(n+" is not a prime number");
+            }
+            else{
+                System.out.println(n+" is a prime number");
+            }
+        }
     }
 }
