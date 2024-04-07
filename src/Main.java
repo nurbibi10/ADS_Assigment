@@ -22,6 +22,9 @@ public class Main {
             case 4:
                 task4();
                 break;
+            case 5:
+                task5();
+                break;
         }
     }
 
@@ -71,5 +74,16 @@ public class Main {
         int n = scan.nextInt();
         int fact=factorial(n);
         System.out.println(fact);
+    }
+    public static int Fibonacci(int n){
+        if(n==0||n==1) return n;
+        else{
+            return Fibonacci(n-1)+Fibonacci(n-2);
+        }
+    }
+    public static void task5(){
+        int n = scan.nextInt();
+        int fib=Fibonacci(n);
+        System.out.println(fib);
     }
 }
