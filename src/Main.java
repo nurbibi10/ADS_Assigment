@@ -41,6 +41,7 @@ public class Main {
                 task10();
                 break;
         }
+        //the time complexity remains constant, O(1).
     }
 
     public static void task1(){
@@ -50,6 +51,8 @@ public class Main {
             int a = scan.nextInt();
             if (mn>a) mn=a;}
         System.out.println(mn);
+        //It reads 'n' integers and finds the minimum among them.
+        // The time complexity is O(n) since it involves a loop iterating over 'n' elements.
     }
 
     public static void task2(){
@@ -60,6 +63,7 @@ public class Main {
             s+=a;
         }
         System.out.println(s/n);
+        //Again, it has a time complexity of O(n) due to the loop.
     }
     public static void task3(){
         int n = scan.nextInt(),s=0;
@@ -78,12 +82,14 @@ public class Main {
                 System.out.println(n+" is a prime number");
             }
         }
+        //The time complexity is O(n) in the worst case because it iterates up to 'n' to check for factors.
     }
     public static int factorial(int n){
         if(n==0||n==1) return 1;
         else{
             return n*factorial(n-1);
         }
+        //The time complexity is O(n) because it calls itself recursively 'n' times.
     }
     public static void task4(){
         int n = scan.nextInt();
@@ -95,11 +101,13 @@ public class Main {
         else{
             return Fibonacci(n-1)+Fibonacci(n-2);
         }
+        //The time complexity of O(2^n) because each call branches into two recursive calls, leading to exponential growth.
     }
     public static void task5(){
         int n = scan.nextInt();
         int fib=Fibonacci(n);
         System.out.println(fib);
+        //Calls Fibonacci(), so its time complexity is the same, O(2^n).
     }
     public static void task6(){
         int a = scan.nextInt(), n = scan.nextInt(), s=1;
@@ -107,6 +115,7 @@ public class Main {
             s*=a;
         }
         System.out.println(s);
+        //The time complexity is O(n) since it involves a loop iterating 'n' times.
     }
     public static void reversearr(int[] arr, int start, int end){
         if(start>=end)  return;
@@ -116,6 +125,7 @@ public class Main {
             arr[end]=t;
             reversearr(arr, start+1, end-1);
         }
+        //The time complexity is O(n) because it iterates through half of the array swapping elements.
     }
     public static void task7(){
         int n = scan.nextInt();
@@ -140,6 +150,7 @@ public class Main {
         else {
             return false;
         }
+        //The time complexity is O(n) where 'n' is the length of the string.
     }
     public static void task8() {
         String s = scan.next();
@@ -153,6 +164,7 @@ public class Main {
                 System.out.println("NO");
             }
         }
+        //Calls digit(), so its time complexity is O(n) where 'n' is the length of the input string.
     }
     public static int bincof(int n, int k) {
         if (k == 0 || n == k) {
@@ -161,11 +173,13 @@ public class Main {
         else{
             return bincof(n-1,k-1)+bincof(n-1,k);
         }
+        //The time complexity is exponential, approximately O(2^n), as it performs redundant calculations.
     }
 
     public static void task9(){
         int n = scan.nextInt(), k= scan.nextInt();
         System.out.println(bincof(n,k));
+        //Calls bincof(), so its time complexity is also exponential, approximately O(2^n).
     }
     public static int gcd(int a, int b){
         if(b==0){
@@ -174,9 +188,11 @@ public class Main {
         else{
             return gcd(b,a%b);
         }
+        //The time complexity is O(log(min(a, b))) using the Euclidean algorithm.
     }
     public static void task10(){
         int a = scan.nextInt(), b= scan.nextInt();
         System.out.println(gcd(a,b));
+        //Calls gcd(), so its time complexity is the same as gcd(), O(log(min(a, b))).
     }
 }
