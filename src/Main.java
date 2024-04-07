@@ -31,6 +31,9 @@ public class Main {
             case 7:
                 task7();
                 break;
+            case 8:
+                task8();
+                break;
         }
     }
 
@@ -118,6 +121,31 @@ public class Main {
         System.out.println("reversed array:");
         for(int i=0; i<n; i++){
             System.out.print(arr[i]+" ");
+        }
+    }
+    public static boolean digit(String s, int index){
+        if (index == s.length()) {
+            return true;
+        }
+        char c = s.charAt(index);
+        if (Character.isDigit(c)) {
+            return digit(s, index + 1);
+        }
+        else {
+            return false;
+        }
+    }
+    public static void task8() {
+        String s = scan.next();
+        if (s == null || s.isEmpty()) {
+            System.out.println("NO");
+        }
+        else{
+            if (digit(s, 0)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
         }
     }
 }
