@@ -37,6 +37,9 @@ public class Main {
             case 9:
                 task9();
                 break;
+            case 10:
+                task10();
+                break;
         }
     }
 
@@ -163,5 +166,17 @@ public class Main {
     public static void task9(){
         int n = scan.nextInt(), k= scan.nextInt();
         System.out.println(bincof(n,k));
+    }
+    public static int gcd(int a, int b){
+        if(b==0){
+            return a;
+        }
+        else{
+            return gcd(b,a%b);
+        }
+    }
+    public static void task10(){
+        int a = scan.nextInt(), b= scan.nextInt();
+        System.out.println(gcd(a,b));
     }
 }
