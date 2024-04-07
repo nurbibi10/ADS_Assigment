@@ -34,6 +34,9 @@ public class Main {
             case 8:
                 task8();
                 break;
+            case 9:
+                task9();
+                break;
         }
     }
 
@@ -147,5 +150,18 @@ public class Main {
                 System.out.println("NO");
             }
         }
+    }
+    public static int bincof(int n, int k) {
+        if (k == 0 || n == k) {
+            return 1;
+        }
+        else{
+            return bincof(n-1,k-1)+bincof(n-1,k);
+        }
+    }
+
+    public static void task9(){
+        int n = scan.nextInt(), k= scan.nextInt();
+        System.out.println(bincof(n,k));
     }
 }
