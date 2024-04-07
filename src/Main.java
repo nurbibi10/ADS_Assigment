@@ -25,6 +25,9 @@ public class Main {
             case 5:
                 task5();
                 break;
+            case 6:
+                task6();
+                break;
         }
     }
 
@@ -85,5 +88,12 @@ public class Main {
         int n = scan.nextInt();
         int fib=Fibonacci(n);
         System.out.println(fib);
+    }
+    public static void task6(){
+        int a = scan.nextInt(), n = scan.nextInt(), s=1;
+        for(int i=0;i<n;i++){
+            s*=a;
+        }
+        System.out.println(s);
     }
 }
