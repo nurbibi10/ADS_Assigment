@@ -13,6 +13,9 @@ public class Main {
             case 1:
                 task1();
                 break;
+            case 2:
+                task2();
+                break;
         }
     }
 
@@ -23,5 +26,15 @@ public class Main {
             int a = scan.nextInt();
             if (mn>a) mn=a;}
         System.out.println(mn);
+    }
+
+    public static void task2(){
+        int n = scan.nextInt();
+        float s = 0;
+        for(int i=0;i<n;i++){
+            int a = scan.nextInt();
+            s+=a;
+        }
+        System.out.println(s/n);
     }
 }
