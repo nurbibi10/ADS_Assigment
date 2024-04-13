@@ -40,6 +40,9 @@ public class Main {
             case 10:
                 task10();
                 break;
+            case 11:
+                task_defense();
+                break;
         }
         //the time complexity remains constant, O(1).
     }
@@ -194,5 +197,27 @@ public class Main {
         int a = scan.nextInt(), b= scan.nextInt();
         System.out.println(gcd(a,b));
         //Calls gcd(), so its time complexity is the same as gcd(), O(log(min(a, b))).
+    }
+
+    public static int rept(String s, int index){
+        char c=s.charAt(index);
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)==c){
+                count+=1;
+            }
+        }
+        return count;
+    }
+    public static void task_defense(){
+        String s= scan.nextLine();
+        if(s==null||s.isEmpty()){
+            System.out.println("NO");
+        }
+        else{
+            if(rept(s,0)!=0){
+                System.out.println(rept(s,0));
+            }
+        }
     }
 }
